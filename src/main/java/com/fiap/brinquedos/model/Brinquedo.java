@@ -2,6 +2,7 @@ package com.fiap.brinquedos.model;
 
 import jakarta.persistence.*;
 
+@Entity
 @Table(name = "TDS_TB_Brinquedos")
 public class Brinquedo {
     @Id
