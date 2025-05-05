@@ -23,4 +23,9 @@ public class BrinquedoController {
     public Brinquedo listarPorId(@PathVariable Long id) {
         return service.listarPorId(id);
     }
+
+    @PostMapping
+    public Brinquedo salvar(@RequestBody Brinquedo brinquedo) {
+        return service.salvar(brinquedo);
+    }
 }
