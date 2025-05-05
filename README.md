@@ -126,7 +126,7 @@ spring.datasource.password=SUA_SENHA
 
 ```jsonc
 {
-  "id": 1
+  "id": 1,
   "nome": "Carrinho Hot Wheels",
   "tipo": "Carrinho",
   "classificacao": "A partir de 3 anos",
