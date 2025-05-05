@@ -18,4 +18,9 @@ public class BrinquedoController {
     public List<Brinquedo> listarTodos() {
         return service.listarTodos();
     }
+
+    @GetMapping("/{id}")
+    public Brinquedo listarPorId(@PathVariable Long id) {
+        return service.listarPorId(id);
+    }
 }
