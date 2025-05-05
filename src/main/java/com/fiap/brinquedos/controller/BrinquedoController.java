@@ -28,4 +28,9 @@ public class BrinquedoController {
     public Brinquedo salvar(@RequestBody Brinquedo brinquedo) {
         return service.salvar(brinquedo);
     }
+
+    @PutMapping("/{id}")
+    public Brinquedo editar(@PathVariable Long id,@RequestBody Brinquedo brinquedo) {
+        return service.editar(id, brinquedo);
+    }
 }
