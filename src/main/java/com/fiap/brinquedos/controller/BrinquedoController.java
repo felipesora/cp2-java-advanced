@@ -4,6 +4,7 @@ import com.fiap.brinquedos.model.Brinquedo;
 import com.fiap.brinquedos.model.ErrorResponse;
 import com.fiap.brinquedos.model.SuccessResponse;
 import com.fiap.brinquedos.service.BrinquedoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,12 +29,12 @@ public class BrinquedoController {
     }
 
     @PostMapping
-    public Brinquedo salvar(@RequestBody Brinquedo brinquedo) {
+    public Brinquedo salvar(@RequestBody @Valid Brinquedo brinquedo) {
         return service.salvar(brinquedo);
     }
 
     @PutMapping("/{id}")
-    public Brinquedo editar(@PathVariable Long id,@RequestBody Brinquedo brinquedo) {
+    public Brinquedo editar(@PathVariable Long id,@RequestBody @Valid Brinquedo brinquedo) {
         return service.editar(id, brinquedo);
     }
 
